@@ -20,7 +20,7 @@ function Login() {
   };
   // console.log("form ", form);
 
-  // console.log(userData);
+   console.log(userData);
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.email) {

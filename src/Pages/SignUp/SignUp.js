@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  useUserContext } from "../../Context/UserContext";
+import { useUserContext } from "../../Context/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "../../Constant/axios";
 import "./Signup.css";
@@ -8,7 +8,7 @@ import About from "../About/About";
 function SignUp() {
   const [form, setForm] = useState({});
   const navigate = useNavigate();
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   //importing global state from context
   const [userData, setUserData] = useUserContext();
@@ -16,7 +16,7 @@ function SignUp() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // console.log(form);
+  console.log(userData);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
